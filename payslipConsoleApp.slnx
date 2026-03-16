@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="payslipConsoleApp/payslipUIConsole.csproj" />
+  <Project Path="PayslipManagementAppServices/PayslipManagementAppServices.csproj" />
+  <Project Path="PayslipManagementModels/PayslipManagementModels.csproj" />
+</Solution>
