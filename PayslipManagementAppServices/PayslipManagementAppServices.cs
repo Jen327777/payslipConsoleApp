@@ -15,7 +15,7 @@ namespace payslipLibrary
         {
             double dailyRate = emp.basicSalary / 22;
             double holidayPay = dailyRate * emp.holidayDays;
-            double grossSalary = (dailyRate * emp.daysPresent) + holidayPay + emp.allowances + emp.overTime; //without deductio salary
+            double grossSalary = (dailyRate * emp.daysPresent) + holidayPay + emp.allowances + emp.overTime; //without deduction salary
             double taxableIncome = grossSalary - emp.sss - emp.philHealth - emp.pagIbig; //deducted salary for tax calc
 
             double incomeTax = 0;
