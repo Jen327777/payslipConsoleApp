@@ -14,4 +14,6 @@ public class Employee
     public int daysPresent;
     public string shift;
     public double sss, philHealth, pagIbig;
+    public char payGrade;
+    
 }

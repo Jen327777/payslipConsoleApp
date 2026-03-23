@@ -22,6 +22,14 @@ namespace payslipLibrary
             Console.WriteLine("Enter Employee Number: ");
             emp.employeeNumber = Console.ReadLine();
 
+            Console.WriteLine("Specify Pay Grade");
+            Console.WriteLine("     ");
+            Console.WriteLine("  [A] = Manager\n" +
+                                "[B] = Supervisor\n" +
+                                "[C] = Staff\n");
+            Console.WriteLine("Pay Grade: ");
+            emp.payGrade = Console.ReadLine().ToUpper()[0];
+
             Console.WriteLine("Basic Salary: ");
             emp.basicSalary = Convert.ToDouble(Console.ReadLine());
 
@@ -58,10 +66,11 @@ namespace payslipLibrary
             Console.WriteLine("---------------------------------------- ");
             Console.WriteLine("Employee Name: " + emp.employeeName);
             Console.WriteLine("Employee Number: " + emp.employeeNumber);
+            Console.WriteLine("Pay Grade: " + emp.payGrade);
             Console.WriteLine("Basic Salary: " + emp.basicSalary);
             Console.WriteLine("Allowances: " + emp.allowances);
             Console.WriteLine("Overtime: " + emp.overTime);
-            Console.WriteLine("Holidays: " + emp.holidayDays + "Present Holiday.");
+            Console.WriteLine("Holidays: " + emp.holidayDays + " Present Holiday.");
             Console.WriteLine("Total of Leaves: " + emp.leaveDays);
             Console.WriteLine("Number of Days Present: " + emp.daysPresent);
             Console.WriteLine("Duration of Shift: " + emp.shift);
@@ -72,6 +81,9 @@ namespace payslipLibrary
             Console.WriteLine("   ");
 
             p.calculator(emp);
+
+
+
 
 
 
