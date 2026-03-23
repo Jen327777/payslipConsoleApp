@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="payslipConsoleApp/payslipUIConsole.csproj" />
   <Project Path="PayslipManagementAppServices/PayslipManagementAppServices.csproj" />
+  <Project Path="PayslipManagementDataServices/PayslipManagementDataServices.csproj" Id="794873f3-5020-46f2-afd9-2e6f576cb2fb" />
   <Project Path="PayslipManagementModels/PayslipManagementModels.csproj" />
 </Solution>

@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PayslipManagementAppServices\PayslipManagementAppServices.csproj" />
+    <ProjectReference Include="..\PayslipManagementDataServices\PayslipManagementDataServices.csproj" />
     <ProjectReference Include="..\PayslipManagementModels\PayslipManagementModels.csproj" />
   </ItemGroup>
 

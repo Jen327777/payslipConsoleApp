@@ -1,5 +1,7 @@
 ﻿
 
+using PayslipManagementDataServices;
+
 namespace payslipLibrary
 {
 
@@ -10,7 +12,7 @@ namespace payslipLibrary
         {
             Employee emp = new Employee();
             PayrollAppService p = new PayrollAppService();
-
+            PayslipDataService dataService = new PayslipDataService();
 
 
             Console.WriteLine("===MONTHLY EMPLOYEE PAYSLIP SYSTEM===");
@@ -24,9 +26,10 @@ namespace payslipLibrary
 
             Console.WriteLine("Specify Pay Grade");
             Console.WriteLine("     ");
-            Console.WriteLine("  [A] = Manager\n" +
+            Console.WriteLine(  "[A] = Manager\n" +
                                 "[B] = Supervisor\n" +
-                                "[C] = Staff\n");
+                                "[C] = Staff\n" +
+                                "[D] = Non - Regularized");
             Console.WriteLine("Pay Grade: ");
             emp.payGrade = Console.ReadLine().ToUpper()[0];
 
@@ -66,7 +69,7 @@ namespace payslipLibrary
             Console.WriteLine("---------------------------------------- ");
             Console.WriteLine("Employee Name: " + emp.employeeName);
             Console.WriteLine("Employee Number: " + emp.employeeNumber);
-            Console.WriteLine("Pay Grade: " + emp.payGrade);
+            Console.WriteLine("Pay Grade: " + emp.payGrade + " Employee Type");
             Console.WriteLine("Basic Salary: " + emp.basicSalary);
             Console.WriteLine("Allowances: " + emp.allowances);
             Console.WriteLine("Overtime: " + emp.overTime);
@@ -81,7 +84,8 @@ namespace payslipLibrary
             Console.WriteLine("   ");
 
             p.calculator(emp);
-
+            dataService.SaveInfo(emp, emp.netSalary);
+            dataService.displayPayslipList();
 
 
 

@@ -15,5 +15,8 @@ public class Employee
     public string shift;
     public double sss, philHealth, pagIbig;
     public char payGrade;
-    
+    public double netSalary;
+
+
+
 }

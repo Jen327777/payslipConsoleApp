@@ -1,5 +1,6 @@
 ﻿using payslipLibrary;
 using System;
+using System.Reflection.Metadata.Ecma335;
 
 
 namespace payslipLibrary
@@ -14,34 +15,34 @@ namespace payslipLibrary
         public void calculator(Employee emp)
         {
 
-           
 
-           
+
+
 
             double dailyRate = emp.basicSalary / 22;
             double leaveDeduction = dailyRate * emp.leaveDays;
             double holidayPay = dailyRate * emp.holidayDays;
             double grossSalary = (dailyRate * emp.daysPresent) + holidayPay + emp.allowances + emp.overTime - leaveDeduction; //without deduction salary
-            
-            
+
+
             double bonusPayGrade = 0;
             switch (emp.payGrade)
             {
                 case 'A':
                     bonusPayGrade = 5000;
-                    
+
                     break;
                 case 'B':
                     bonusPayGrade = 3000;
-                    
+
                     break;
                 case 'C':
                     bonusPayGrade = 1000;
-                    
+
                     break;
                 case 'D':
                     bonusPayGrade = 0;
-                   
+
                     break;
                 default:
                     Console.WriteLine("Invalid paygrade. Try again...");
@@ -70,20 +71,21 @@ namespace payslipLibrary
                 incomeTax = (taxableIncome - 20833) * 0.35;
 
 
-            double netSalary = taxableIncome - incomeTax;
+            emp.netSalary = taxableIncome - incomeTax;
 
 
             Console.WriteLine("----------------------------------------------------");
+            Console.WriteLine("Paygrade Bonus: " + bonusPayGrade);
             Console.WriteLine("Gross Salary: " + grossSalary.ToString("F2"));
             Console.WriteLine("Total Deductions: " + (emp.sss + emp.philHealth + emp.pagIbig));
             Console.WriteLine("Income Tax: " + incomeTax.ToString("F2"));
-
-            Console.WriteLine("Net Salary: " + netSalary.ToString("F2"));
+            Console.WriteLine("Net Salary: " + emp.netSalary.ToString("F2"));
 
         }
+
+
+
     }
-
-
 
 }
 
