@@ -84,8 +84,8 @@ namespace payslipLibrary
             Console.WriteLine("   ");
 
             p.calculator(emp);
-            dataService.SaveInfo(emp, emp.netSalary);
-            dataService.displayPayslipList();
+            dataService.SaveInfo(emp);
+            dataService.DisplayPayslipList();
 
 
 

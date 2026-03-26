@@ -11,12 +11,12 @@ namespace payslipLibrary
     public class PayrollAppService
     {
 
-
+        
         public void calculator(Employee emp)
         {
 
-
-
+            
+               
 
 
             double dailyRate = emp.basicSalary / 22;
@@ -82,7 +82,7 @@ namespace payslipLibrary
             Console.WriteLine("Net Salary: " + emp.netSalary.ToString("F2"));
 
         }
-
+       
 
 
     }
