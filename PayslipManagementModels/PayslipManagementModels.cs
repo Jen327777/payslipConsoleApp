@@ -31,7 +31,6 @@ public class Employee
     public int holidayDays { get; set; }
     public int leaveDays { get; set; }
     public int daysPresent { get; set; }
-    public string shift { get; set; }
     public double sss { get; set; }
     public double philHealth { get; set; }
     public double pagIbig { get; set; }

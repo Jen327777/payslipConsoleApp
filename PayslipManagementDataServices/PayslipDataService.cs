@@ -87,8 +87,18 @@ namespace PayslipManagementDataServices
                 Console.WriteLine(
                     "Employee Name: " + e.employeeName +
                     "\nEmployee Number: " + e.employeeNumber +
-                    "\nShift Hours: " + e.shift +
+                    "\nBasic Salary: "   + e.basicSalary.ToString("F2")  +
+                    "\nAllowances: "     + e.allowances.ToString("F2") +
+                    "\nOvertime: " + e.overTime.ToString("F2") +
+                    "\nHoliday Days: " + e.holidayDays +
+                    "\nLeave Days: " + e.leaveDays +
+                    "\nDays Present: "   + e.daysPresent +
+                    "\nSSS: " + e.sss.ToString("F2") +
+                    "\nPhilHealth: " + e.philHealth.ToString("F2") +
+                    "\nPag-IBIG: " + e.pagIbig.ToString("F2") +
+                    "\nPay Grade: " + e.payGrade +
                     "\nNet Salary: " + e.netSalary.ToString("F2") +
+                    
                     "\n=============================================");
             }
         }
