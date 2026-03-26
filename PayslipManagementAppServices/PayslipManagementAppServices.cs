@@ -74,7 +74,10 @@ namespace payslipLibrary
             emp.netSalary = taxableIncome - incomeTax;
 
 
-            Console.WriteLine("----------------------------------------------------");
+            Console.WriteLine("=========================================================="
+                + "\n              ");
+
+
             Console.WriteLine("Paygrade Bonus: " + bonusPayGrade);
             Console.WriteLine("Gross Salary: " + grossSalary.ToString("F2"));
             Console.WriteLine("Total Deductions: " + (emp.sss + emp.philHealth + emp.pagIbig));

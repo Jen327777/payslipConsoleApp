@@ -79,6 +79,8 @@ namespace payslipLibrary
             //Console.WriteLine("   ");
             //Console.WriteLine("   ");
 
+
+            //this now for calling the methods sa each classes
             p.calculator(emp);
             dataService.SaveInfo(emp);
             dataService.DisplayPayslipList();

@@ -111,7 +111,7 @@ namespace PayslipManagementDataServices
 {
     public class payslipJSONData
     {
-        private readonly string _jsonFileName;
+        private string _jsonFileName;
         public List<Employee> EmployeeList { get; private set; }
 
         public payslipJSONData()
@@ -120,7 +120,7 @@ namespace PayslipManagementDataServices
             LoadData();
         }
 
-        private void LoadData()
+        public void LoadData()
         {
             if (!File.Exists(_jsonFileName))
             {

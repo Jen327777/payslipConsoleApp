@@ -64,16 +64,19 @@ namespace PayslipManagementDataServices
 {
     public class PayslipDataService
     {
-        private readonly payslipJSONData _jsonData;
+
+      
+        payslipJSONData _jsonData;
 
         public PayslipDataService()
         {
+            EmployeeDBData dbData = new EmployeeDBData();
             _jsonData = new payslipJSONData();
         }
 
-        public void SaveInfo(Employee e)
+        public void SaveInfo(Employee emp)
         {
-            _jsonData.EmployeeList.Add(e);   // add to JSON list
+            _jsonData.EmployeeList.Add(emp);   // add to JSON list
             _jsonData.SaveData();            // save to file
 
             Console.WriteLine("\nSuccessfully added employee information to the payslip record.");
@@ -81,23 +84,25 @@ namespace PayslipManagementDataServices
 
         public void DisplayPayslipList()
         {
-            Console.WriteLine("===LIST OF EMPLOYEES IN THE PAYSLIP RECORD===");
-            foreach (var e in _jsonData.EmployeeList)
+            Console.WriteLine("\n--------------------------------------------------------\n");
+
+            Console.WriteLine("===LIST OF EMPLOYEES IN THE PAYSLIP RECORD===\n");
+            foreach (var emp in _jsonData.EmployeeList)
             {
                 Console.WriteLine(
-                    "Employee Name: " + e.employeeName +
-                    "\nEmployee Number: " + e.employeeNumber +
-                    "\nBasic Salary: "   + e.basicSalary.ToString("F2")  +
-                    "\nAllowances: "     + e.allowances.ToString("F2") +
-                    "\nOvertime: " + e.overTime.ToString("F2") +
-                    "\nHoliday Days: " + e.holidayDays +
-                    "\nLeave Days: " + e.leaveDays +
-                    "\nDays Present: "   + e.daysPresent +
-                    "\nSSS: " + e.sss.ToString("F2") +
-                    "\nPhilHealth: " + e.philHealth.ToString("F2") +
-                    "\nPag-IBIG: " + e.pagIbig.ToString("F2") +
-                    "\nPay Grade: " + e.payGrade +
-                    "\nNet Salary: " + e.netSalary.ToString("F2") +
+                    "Employee Name: " + emp.employeeName +
+                    "\nEmployee Number: " + emp.employeeNumber +
+                    "\nBasic Salary: "   + emp.basicSalary.ToString("F2")  +
+                    "\nAllowances: "     + emp.allowances.ToString("F2") +
+                    "\nOvertime: " + emp.overTime.ToString("F2") +
+                    "\nHoliday Days: " + emp.holidayDays +
+                    "\nLeave Days: " + emp.leaveDays +
+                    "\nDays Present: "   + emp.daysPresent +
+                    "\nSSS: " + emp.sss.ToString("F2") +
+                    "\nPhilHealth: " + emp.philHealth.ToString("F2") +
+                    "\nPag-IBIG: " + emp.pagIbig.ToString("F2") +
+                    "\nPay Grade: " + emp.payGrade +
+                    "\nNet Salary: " + emp.netSalary.ToString("F2") +
                     
                     "\n=============================================");
             }
