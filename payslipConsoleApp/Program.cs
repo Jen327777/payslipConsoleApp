@@ -13,7 +13,7 @@ namespace payslipLibrary
             Employee emp = new Employee();
             PayrollAppService p = new PayrollAppService();
             PayslipDataService dataService = new PayslipDataService();
-
+            EmployeeDBData database = new EmployeeDBData();
 
             Console.WriteLine("===MONTHLY EMPLOYEE PAYSLIP SYSTEM===");
 
@@ -84,6 +84,7 @@ namespace payslipLibrary
             p.calculator(emp);
             dataService.SaveInfo(emp);
             dataService.DisplayPayslipList();
+            database.AddEmployee(emp);
 
 
 
