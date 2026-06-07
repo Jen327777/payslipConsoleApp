@@ -20,10 +20,14 @@ namespace PayslipManagementDataServices
 
         public void SaveInfo(Employee emp)
         {
-            _jsonData.EmployeeList.Add(emp);   // add to JSON list
-            _jsonData.SaveData();            // save to file
+            _jsonData.EmployeeList.Add(emp);
+            _jsonData.SaveData();
 
             Console.WriteLine("\nSuccessfully added employee information to the payslip record.");
+        }
+        public List<Employee> GetEmployeeList()
+        {
+            return _jsonData.EmployeeList;
         }
 
         public void DisplayPayslipList()

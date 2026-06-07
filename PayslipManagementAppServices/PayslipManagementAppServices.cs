@@ -22,8 +22,7 @@ namespace payslipLibrary
             double dailyRate = emp.basicSalary / 22;
             double leaveDeduction = dailyRate * emp.leaveDays;
             double holidayPay = dailyRate * emp.holidayDays;
-            double grossSalary = (dailyRate * emp.daysPresent) + holidayPay + emp.allowances + emp.overTime - leaveDeduction; //without deduction salary
-
+            double grossSalary = (dailyRate * emp.daysPresent) + holidayPay + emp.allowances + emp.overTime - leaveDeduction; 
 
             double bonusPayGrade = 0;
             switch (emp.payGrade)
@@ -53,7 +52,7 @@ namespace payslipLibrary
             }
             grossSalary += bonusPayGrade;
 
-            double taxableIncome = grossSalary - emp.sss - emp.philHealth - emp.pagIbig; //deducted salary for tax calc
+            double taxableIncome = grossSalary - emp.sss - emp.philHealth - emp.pagIbig; 
 
             double incomeTax = 0;
 
