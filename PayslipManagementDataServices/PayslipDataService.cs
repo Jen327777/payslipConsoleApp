@@ -51,7 +51,7 @@ namespace PayslipManagementDataServices
                     "\nOvertime: " + emp.overTime.ToString("F2") +
                     "\nHoliday Days: " + emp.holidayDays +
                     "\nLeave Days: " + emp.leaveDays +
-                    "\nDays Present: "   + emp.daysPresent +
+                    "\nDays Present: " + emp.daysPresent +
                     "\nSSS: " + emp.sss.ToString("F2") +
                     "\nPhilHealth: " + emp.philHealth.ToString("F2") +
                     "\nPag-IBIG: " + emp.pagIbig.ToString("F2") +

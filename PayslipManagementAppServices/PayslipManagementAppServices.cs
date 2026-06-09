@@ -15,14 +15,16 @@ namespace payslipLibrary
         public void calculator(Employee emp)
         {
 
-            
-               
+
+
 
 
             double dailyRate = emp.basicSalary / 22;
             double leaveDeduction = dailyRate * emp.leaveDays;
             double holidayPay = dailyRate * emp.holidayDays;
-            double grossSalary = (dailyRate * emp.daysPresent) + holidayPay + emp.allowances + emp.overTime - leaveDeduction; 
+            double grossSalary = (dailyRate * emp.daysPresent) + holidayPay + emp.allowances + emp.overTime - leaveDeduction;
+
+          
 
             double bonusPayGrade = 0;
             switch (emp.payGrade)
